@@ -20,8 +20,8 @@ makeCacheMatrix<-function(x=matrix()){
        inv<<-NULL
   }
   get<-function() {x}
-  setInverse<-function(inverse) {inv<<-inverse} # to calculate inverse of a matrix
-  getInverse<-function() {inv} # to get the inverse of the matrix
+  setInverse<-function(inverse) {inv<<-inverse}
+  getInverse<-function() {inv} 
   list(set=set,get=get,setInverse=setInverse,getInverse=getInverse)
 }
 
@@ -39,15 +39,15 @@ cacheSolve<-function(x,..){
 
 # set mean and get mean of the vector
 
-makeVector <- function(x = numeric()) { # Giving vector as input through function
+makeVector <- function(x = numeric()) { 
   m <- NULL
   set <- function(y) {
     x <<- y
     m <<- NULL
   }
   get <- function() x
-  setmean <- function(mean) m <<- mean # Used to set mean for a vector
-  getmean <- function() m  #to get the mean of the vector
+  setmean <- function(mean) m <<- mean
+  getmean <- function() m  
   list(set = set, get = get,
        setmean = setmean,
        getmean = getmean)
